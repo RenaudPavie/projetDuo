@@ -1,3 +1,15 @@
-.jumbotron {
-    padding: 2rem 0rem;
+
+body .jumbotron {
+    padding: 1rem 2rem;
+}
+
+#chatText{
+	width: 90%;
+
+}
+
+h1,p{
+	text-align: center;
+	border-bottom: 1px black solid;
+	
 }
