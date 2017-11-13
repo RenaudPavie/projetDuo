@@ -4,6 +4,7 @@
 		<title>ChatDuo</title>
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 	</head>
 	<body>
 		<!--Header Boot-->
@@ -19,26 +20,21 @@
 		
 		<div class="row">
 			<div id="afficherUser" class="col-3">
-			
+				
 				
 			</div>
 			
 			<div class="col-9 ">
+				<div class="container">
+					<form class="form-inline">
+						<input type="text" class="form-control" id="chatText" placeholder="Ecrivez votre message">
+						<button id="sendIt" type="submit" class="btn btn-primary">Envoyez</button>
+					</form>
+				</div>
 				
 			</div>
 		</div><br>
-		
-		<!--Colone Fin-->
-		<!-- Footer -->
-		<footer>
-			<div class="container">
-				<form class="form-inline">
-					<input type="text" class="form-control" id="chatText" placeholder="Ecrivez votre message">
-					<button id="sendIt" type="button" class="btn btn-primary" onclick="envoyerMessage()">Envoyez</button>
-				</form>
-			</div>
-		</footer>
-		<!-- fin du footer -->
+		<!-- fin colone -->
 		<script
 		src="https://code.jquery.com/jquery-3.2.1.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

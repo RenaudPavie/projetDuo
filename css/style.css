@@ -13,21 +13,39 @@ body .jumbotron {
 
 }
 
-h1,p{
+body h1{
+	font-family: 'Indie Flower', cursive;
 	text-align: center;
-	border-bottom: 1px black solid ;
+	border-bottom: 1px black solid;
+
+	
+}
+
+
+p{
+	font-family: 'Indie Flower', cursive;
+	text-align: center;
+	border-bottom: 1px black solid;
+
 	
 }
 
 .row{
-	height: 90%
+	height: 60%
 }
 
 .col-3{
 	background-color: #e5e5e5;
 	border-radius: 5px;
+
 }
 .col-9{
 	background-color: grey;
 	border-radius: 5px;
+
+
+}
+
+.container{
+	margin-top: 32%;
 }
