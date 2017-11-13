@@ -17,22 +17,23 @@ $.ajax({
 	method : 'get',
 }).done(function(getUser){
 	// console.log(getUser)
+
 });
 
 function envoyerMessage() {
-	document.getElementById('chatText').value = '';
 	userText = $('#chatText').val();
+	$('#chatText').val('');
 	$.ajax({
-	url : 'http://messenger.api.niamor.com/sendMessage',
-	method : 'post',
-	data: {
-		authKey: user.authKey,
-		text: userText,
-		to: 0
-	}
+		url : 'http://messenger.api.niamor.com/sendMessage',
+		method : 'post',
+		data: {
+			authKey: user.authKey,
+			text: userText,
+			to: 0
+		}
 	});
-}
 
+};
 
 setInterval(function() {
 	$.ajax({
