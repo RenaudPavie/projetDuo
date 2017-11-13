@@ -40,11 +40,12 @@ font-family: 'Indie Flower', cursive;
 	text-align: center;
 	border-bottom: 1px black solid ;
 	margin-left: 40%;
-	margin-right:40%
+	margin-right:40%;
+
 }
 
 
-p{
+#paraTitre{
 	font-family: 'Indie Flower', cursive;
 	text-align: center;
 	border-bottom: 1px black solid;
@@ -56,7 +57,7 @@ p{
 
 
 .row{
-	height: 70%;
+	height: 65%;
 	width:100%;
 }
 
@@ -74,12 +75,13 @@ p{
 
 }
 
-.container{
-	margin-top: 35%;
+
+
+input.form-control{
 	display: inline-block;
-	position: sticky;
+	width: 2px
 }
 
-.form-control{
-	display: inline-block;
+#myText{
+	
 }
