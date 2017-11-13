@@ -22,18 +22,20 @@ body h1{
 	text-align: center;
 	border-bottom: 1px black solid ;
 	margin-left: 40%;
-	margin-right: 40%
+	margin-right: 40%;
+	color:orange;
 	
 	
 }
 
 #titre2{
 	
-font-family: 'Indie Flower', cursive;
+	font-family: 'Indie Flower', cursive;
 	text-align: center;
 	border-bottom: 1px black solid ;
-	margin-left: 5%;
-	margin-right: 5%
+	margin:5%;
+	font-size:1.5em;
+	color:orange;
 	
 	
 }
@@ -43,7 +45,8 @@ font-family: 'Indie Flower', cursive;
 	text-align: center;
 	border-bottom: 1px black solid ;
 	margin-left: 40%;
-	margin-right:40%
+	margin-right:40%;
+	color:orange;
 }
 
 
@@ -52,36 +55,44 @@ font-family: 'Indie Flower', cursive;
 	text-align: center;
 	border-bottom: 1px black solid;
 	margin-left: 35%;
-	margin-right: 35%
-
-	
+	margin-right: 35%;
 }
 
 
 .row{
-	height: 70%;
+	height: 65%;
 	width:100%;
 }
 
 .col-3{
 	background-color: #e5e5e5;
 	outline: black solid 4px;
-	overflow: auto
-
 }
+
+#listUsers {
+	overflow: auto;
+	height:80%;
+}
+
 .col-9{
 	background-color: grey;
 	outline: black solid 4px;
-	overflow: auto;
-
-
+	
 }
 
-
+#myText {
+	height:85%;
+	overflow: auto;
+}
 
 #chatText{
-	width: 50%;
-	margin-left: 40%;
+	width: 90%;
+	margin:auto;
 	display: inline-block;
+}
+
+#myInputs {
+	padding:0;
+	margin-top:17px;
 }
 
