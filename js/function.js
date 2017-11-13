@@ -19,6 +19,9 @@ $.ajax({
 }).done(function(getUser){
 	// console.log(getUser)
 	allUser = getUser;
+	for (i = 0; i < allUser.length; i++) {
+		document.getElementById('afficherUser').innerHTML += '<li>'+ allUser[i].username +'</li>';
+	}
 });
 
 function envoyerMessage() {
@@ -46,7 +49,7 @@ setInterval(function() {
 		}
 	}).done(function(msg) {
 		for (i = 0; i < msg.length ; i++) {
-			document.getElementById('myText').innerHTML += '<p>'+ allUser.username +'<br>'+ msg[i].text+'</p>';
+			document.getElementById('myText').innerHTML += '<p>'+ msg[i].from.username +'<br>'+ msg[i].text+'</p>';
 			console.log(msg[i].text);
 			if (i==msg.length-1) {
 				lesId = msg[i].id;
