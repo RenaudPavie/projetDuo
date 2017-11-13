@@ -1,6 +1,7 @@
 
 var user;
 var userText;
+var lesId;
 
 $.ajax({
 	url : 'http://messenger.api.niamor.com/createUser',
@@ -33,10 +34,15 @@ function envoyerMessage() {
 $('#sendIt').click(function() {
 	$.ajax({
 		url : 'http://messenger.api.niamor.com/getMessages',
+		method : 'post',
+		data : {
+			authKey : user.authKey,
+			lastId : 0,
+		}
 
 	}).done(function(msg) {
-		for (i = 0; i < msg.length: ; i--) {
-			$().append('<p></p>')
+		for (i = 0; i < msg.length ; i++) {
+			$('monDiv').append('<p>'+msg[i]+'</p>')
 		}
 	})
 })
