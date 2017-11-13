@@ -2,6 +2,7 @@
 var user;
 var userText;
 var lesId = 0;
+var allUser;
 
 
 $.ajax({
@@ -17,7 +18,7 @@ $.ajax({
 	method : 'get',
 }).done(function(getUser){
 	// console.log(getUser)
-
+	allUser = getUser;
 });
 
 function envoyerMessage() {
@@ -45,7 +46,7 @@ setInterval(function() {
 		}
 	}).done(function(msg) {
 		for (i = 0; i < msg.length ; i++) {
-			document.getElementById('myText').innerHTML += '<p>'+ user.authKey +'<br>'+ msg[i].text+'</p>';
+			document.getElementById('myText').innerHTML += '<p>'+ allUser.username +'<br>'+ msg[i].text+'</p>';
 			console.log(msg[i].text);
 			if (i==msg.length-1) {
 				lesId = msg[i].id;
