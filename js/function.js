@@ -9,7 +9,7 @@ $.ajax({
 	url : 'http://messenger.api.niamor.com/createUser',
 	method : 'get',
 }).done(function(newUser) {
-	// console.log(newUser);
+
 	user = newUser;
 });
 
@@ -17,7 +17,7 @@ $.ajax({
 	url : 'http://messenger.api.niamor.com/getUsers',
 	method : 'get',
 }).done(function(getUser){
-	// console.log(getUser)
+	
 	allUser = getUser;
 	for (i = 0; i < allUser.length; i++) {
 		document.getElementById('afficherUser').innerHTML += '<li>'+ allUser[i].username +'</li>';
@@ -32,8 +32,10 @@ function envoyerMessage() {
 		method : 'post',
 		data: {
 			authKey: user.authKey,
+			
 			text: userText,
 			to: 0
+
 		}
 	});
 
@@ -58,3 +60,9 @@ setInterval(function() {
 	});
 }, 1000);
 
+function keypress(){
+	if (event.keyCode ==13){
+		envoyerMessage();
+	}
+}
+$( ".row" ).scrollTop(5000);
