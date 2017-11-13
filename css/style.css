@@ -66,6 +66,7 @@ font-family: 'Indie Flower', cursive;
 .col-3{
 	background-color: #e5e5e5;
 	outline: black solid 4px;
+	overflow: auto
 
 }
 .col-9{
