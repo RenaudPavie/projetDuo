@@ -25,7 +25,8 @@ function envoyerMessage() {
 	data: {
 		authkey: user.authKey,
 		text: userText,
+		to: 0,
 	}
-	
 	});
+	
 }
