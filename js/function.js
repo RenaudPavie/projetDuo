@@ -7,7 +7,7 @@ $.ajax({
 	url : 'http://messenger.api.niamor.com/createUser',
 	method : 'get',
 }).done(function(newUser) {
-	console.log(newUser);
+	// console.log(newUser);
 	user = newUser;
 });
 
@@ -15,10 +15,11 @@ $.ajax({
 	url : 'http://messenger.api.niamor.com/getUsers',
 	method : 'get',
 }).done(function(getUser){
-	console.log(getUser)
+	// console.log(getUser)
 });
 
 function envoyerMessage() {
+	document.getElementById('chatText').value = '';
 	userText = $('#chatText').val();
 	$.ajax({
 	url : 'http://messenger.api.niamor.com/sendMessage',
@@ -31,7 +32,7 @@ function envoyerMessage() {
 	});
 }
 
-$('#sendIt').click(function() {
+setInterval(function() {
 	$.ajax({
 		url : 'http://messenger.api.niamor.com/getMessages',
 		method : 'post',
@@ -39,12 +40,11 @@ $('#sendIt').click(function() {
 			authKey : user.authKey,
 			lastId : 0,
 		}
-
 	}).done(function(msg) {
 		for (i = 0; i < msg.length ; i++) {
-			$('monDiv').append('<p>'+msg[i].text+'</p>')
+			document.getElementById('myText').innerHTML += '<p>'+ user.authKey +'<br>'+ msg[i].text+'</p>';
 			console.log(msg[i].text);
 		}
-	})
-})
+	});
+}, 1500);
 
