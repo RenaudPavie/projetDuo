@@ -72,9 +72,11 @@ p{
 }
 
 
-.form-control{
-	display: inline-block;
-	 width: 50% ;
-	 
+
+#chatText{
+	width: 50%;
+	margin-left: 40%;
+
+display: inline-block;
 }
 
