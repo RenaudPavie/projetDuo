@@ -8,10 +8,7 @@ body .jumbotron {
    
 }
 
-#chatText{
-	width: 90%;
 
-}
 
 body h1{
 	
@@ -75,12 +72,11 @@ p{
 }
 
 
-.form-control{
-	display: inline-block;
-	width: 60% ;
-	 margin-left: 30%
+
+#chatText{
+	width: 50%;
+	margin-left: 40%;
+
+display: inline-block;
 }
 
-.form-control{
-	display: inline-block;
-}
