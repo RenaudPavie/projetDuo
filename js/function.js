@@ -1,7 +1,8 @@
 
 var user;
 var userText;
-var lesId;
+var lesId = 0;
+
 
 $.ajax({
 	url : 'http://messenger.api.niamor.com/createUser',
@@ -32,18 +33,22 @@ function envoyerMessage() {
 	});
 }
 
+
 setInterval(function() {
 	$.ajax({
 		url : 'http://messenger.api.niamor.com/getMessages',
 		method : 'post',
 		data : {
 			authKey : user.authKey,
-			lastId : 0,
+			lastId : lesId,
 		}
 	}).done(function(msg) {
 		for (i = 0; i < msg.length ; i++) {
 			document.getElementById('myText').innerHTML += '<p>'+ user.authKey +'<br>'+ msg[i].text+'</p>';
 			console.log(msg[i].text);
+			if (i==msg.length-1) {
+				lesId = msg[i].id;
+			}
 		}
 	});
 }, 1500);
