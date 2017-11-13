@@ -28,5 +28,16 @@ function envoyerMessage() {
 		to: 0,
 	}
 	});
-	
 }
+
+$('#sendIt').click(function() {
+	$.ajax({
+		url : 'http://messenger.api.niamor.com/getMessages',
+
+	}).done(function(msg) {
+		for (i = 0; i < msg.length: ; i--) {
+			$().append('<p></p>')
+		}
+	})
+})
+
